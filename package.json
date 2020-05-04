@@ -17,7 +17,8 @@
   "dependencies": {
     "@hapi/boom": "9.x.x",
     "@hapi/joi": "17.x.x",
-    "haute-couture": "3.x.x"
+    "haute-couture": "3.x.x",
+    "schmervice": "^1.5.0"
   },
   "devDependencies": {
     "babel-eslint": "10.x.x",
