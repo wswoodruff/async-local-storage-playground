@@ -18,7 +18,8 @@
     "@hapi/boom": "9.x.x",
     "@hapi/joi": "17.x.x",
     "haute-couture": "3.x.x",
-    "schmervice": "^1.5.0"
+    "schmervice": "^1.5.0",
+    "toys": "2.x.x"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
@@ -33,7 +34,6 @@
     "eslint": "6.x.x",
     "hpal": "2.x.x",
     "hpal-debug": "1.x.x",
-    "nodemon": "^2.0.3",
-    "toys": "2.x.x"
+    "nodemon": "^2.0.3"
   }
 }

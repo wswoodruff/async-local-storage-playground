@@ -2,11 +2,18 @@
 
 const Glue = require('@hapi/glue');
 const Manifest = require('./manifest');
+const AsyncLocalLogger = require('../async-local-logger');
 
 exports.deployment = async (start) => {
 
     const manifest = Manifest.get('/');
-    const server = await Glue.compose(manifest, { relativeTo: __dirname });
+    const server = await Glue.compose({
+        ...manifest,
+        server: {
+            ...manifest.server,
+            listener: AsyncLocalLogger.createHttpServer()
+        }
+    }, { relativeTo: __dirname });
 
     await server.initialize();
 
