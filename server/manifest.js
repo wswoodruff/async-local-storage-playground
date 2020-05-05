@@ -20,7 +20,7 @@ module.exports = new Confidence.Store({
             $filter: { $env: 'NODE_ENV' },
             $default: {
                 log: ['error'],
-                request: ['error']
+                request: ['error', 'async-local']
             },
             production: {
                 request: ['implementation']
@@ -32,6 +32,9 @@ module.exports = new Confidence.Store({
             {
                 plugin: '../lib', // Main plugin
                 options: {}
+            },
+            {
+                plugin: '../async-local-logger'
             },
             {
                 plugin: {
